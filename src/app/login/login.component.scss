@@ -1,0 +1,106 @@
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url("https://www.lifeofpix.com/wp-content/uploads/2018/04/275-ake6418-jj-jite-001-1600x1000.jpg");
+  height: 100 vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*NAVIGATION BAR*/
+#nav-bar
+{
+    position:sticky;
+    top:0;
+    z-index: 10;
+}
+
+.navbar-brand img
+{
+height:80px;
+padding-left: 30px;
+}
+.navbar{
+    background: #fff;
+
+}
+.navbar-toggler
+{
+    border: none!important;
+}
+.nav-link
+{
+    color:#555!important;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/*--------------------------LOGIN FORM--------------------*/
+
+.login-box
+{
+  width: 280px;
+  position: absolute;
+  top:45%;
+  left: 20%;
+  transform: translate(-10%,-90%);
+  color:rgb(14, 14, 189);
+}
+.login-box h1{
+  float: left;
+  font-size: 40px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.textbox
+{
+  width:100%;
+  overflow:hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin:8px 0;
+  border-bottom: 1px solid;
+  color:rgb(14, 14, 189);
+}
+.textbox i
+{
+  width:26px;
+  float:left;
+  text-align: center;
+  color:rgb(14, 14, 189);
+}
+
+.textbox input{
+  border:none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  width:80px;
+  float: left;
+  margin: 0 10px;
+  color:white;
+}
+.button
+{
+  width:100%;
+  background: none;
+  border:2px solid;
+  color:rgb(14, 14, 189);
+  padding: 5px;
+
+}
+
+::placeholder { 
+  color:white;
+  opacity: 1; 
+}
+
+::message { 
+  color:red;
+  opacity: 1; 
+}

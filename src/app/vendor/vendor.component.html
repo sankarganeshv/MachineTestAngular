@@ -1,0 +1,62 @@
+
+   <div class="container">
+    <link rel="stylesheet"
+       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <a routerLink=""><img src="assets/logout.png" style="width:40px;"/></a> 
+    <a routerLink="/add" class="btn btn-info" >ADD VENDOR</a>
+    <h3 class="d-flex justify-content-center" style="color:rgb(15, 42, 121),margin-left=500px">VENDOR LIST</h3>
+    <br>
+    <table class="table-bordered table-hover table-striped " 
+       style="margin-left:175px; width:900px;margin-bottom:40px; text-align:center;row-gap: 70px">
+       <thead class="thead-light">
+          <tr>
+             <th>Vendor Id</th>
+             <th>Vendor Name</th>
+             <th>Location</th>
+             <th>Service</th>
+             <th>Contact Person</th>
+             <th>Phone Number</th>
+             
+             <th>Edit/Disable</th>
+          </tr>
+       </thead>
+       <tbody class="table-striped table-hover">
+          <tr *ngFor="let vendors of vendor | paginate: { itemsPerPage: 2, currentPage: p }; let i = index">
+             <td>{{vendors.vId}}</td>
+             <td>{{vendors.vName}}</td>
+             <td>{{vendors.vLocation}}</td>
+             <td>{{vendors.vService}}</td>
+             <td>{{vendors.cName}}</td>
+             <td>{{vendors.phone}}</td>
+             
+             <button (click)="disable(vendors.vId)" class="btn btn-danger">Disable</button>
+             <button (click)="edit(vendors.vId)" class="btn btn-info" style="margin-left: 10px">Edit</button>
+       </tbody>
+    </table>
+ </div>
+ <div style="margin-left: 500px;">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+ </div>
+ <div>
+    <br>
+    <br>
+    <br>
+    <br> 
+    <br>
+    <div class="container input-group md-form form-sm form-1 pl-0" style="width:400px ;">
+       <div class="input-group-prepend">
+          <span class="input-group-text cyan lighten-2" id="basic-text1"><i class="fa fa-search"
+             aria-hidden="true"></i></span>
+       </div>
+       <input class="form-control my-0 py-1" type="text" placeholder="Search by name/phone/service..."  [(ngModel)]="searchString" (ngModelChange)="search(searchString)"aria-label="Search">
+       <button (click)="search(searchString)" class="btn-info">Search</button>
+    </div>
+    <br>
+    <br> 
+    <br>
+    <br>
+    <br>
+    <h3 style="text-align:center">
+       <img src="assets/img.jpg" class="img-fluid" alt="Responsive image" width=100%>
+    </h3>
+ </div>
